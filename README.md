@@ -1,0 +1,1 @@
+ Check if a user follows another user on GitHub.

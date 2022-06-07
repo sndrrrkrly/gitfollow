@@ -1,0 +1,9 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.18.0/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+     font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
