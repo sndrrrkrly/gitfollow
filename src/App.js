@@ -7,7 +7,7 @@ export default class App extends Component {
           this.state = {
                user: 'chubin',
                target: 'JedWatson',
-               doesFollow: ''
+               doesFollow: false
           };
 
           this.handleChange = this.handleChange.bind(this);
@@ -32,7 +32,7 @@ export default class App extends Component {
           doesFollow = response.status === 204 ? true : false;
 
           if (doesFollow) {
-               console.log(`${user} follows ${target}!`);
+               this.setState({ doesFollow: true });
           };
      };
 
@@ -56,7 +56,7 @@ export default class App extends Component {
                               </p>
 
                               <p className = 'text-base font-light text-gray-400'>
-                                   { this.state.doesFollow ? `🎉 Yes, ${this.state.user} follows ${this.state.target}!` : 'asd' }
+                                   { this.state.doesFollow ? `🎉 Yes, ${this.state.user} follows ${this.state.target}!` : "" }
                               </p>
 
                               <form onSubmit = { this.handleSubmit } className = 'mt-6 flex flex-grow-0 space-x-6'>
